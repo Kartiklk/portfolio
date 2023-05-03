@@ -1,0 +1,519 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Space Grotesk', sans-serif;
+}
+body {
+  background-image: url(img/folio.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+header {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.356);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  z-index: 9;
+  top: 0;
+}
+header nav .menu {
+  display: none;
+}
+header nav .half {
+  display: none;
+}
+header nav .full {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0cm 1cm;
+  transition: 0.2s ease;
+}
+header nav .full:hover {
+  /* box-shadow: 2px; */
+  /* box-shadow: 0 0px 20px 1px rgba(129, 128, 128, 0.377) inset; */
+  border-bottom: 2px solid rgba(129, 128, 128, 0.377);
+}
+header nav .logo h1 {
+  /* font-family: 'Shadows Into Light', cursive; */
+  text-align: center;
+  font-size: 2rem;
+  /* margin-left: -4cm; */
+  background: -webkit-linear-gradient(
+    rgb(255, 255, 255),
+    rgb(187, 180, 180),
+    rgb(255, 255, 255)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+header nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+header nav ul li {
+  list-style: none;
+  text-align: center;
+  margin: 1rem 2rem;
+}
+header nav ul li a {
+  font-family: 'Teko', sans-serif;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  align-items: center;
+  transition: 0.5s ease;
+  font-size: 0.8cm;
+}
+header nav ul li a:hover {
+  color: orange;
+}
+#self .myself {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 8rem;
+  text-shadow: 2px 2px 15px #00000065;
+}
+#self .myself h2 {
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 1.5cm;
+  background: -webkit-linear-gradient(rgb(255, 201, 201), rgb(255, 251, 194));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#self .myself h1 {
+  font-size: 2cm;
+  color: white;
+}
+#self .myself h1 span {
+  font-family: 'Abril Fatface', cursive;
+  font-size: 2.2cm;
+  color: rgb(255, 166, 0);
+}
+#self .myself h3 {
+  /* font-family: 'Slabo 27px', serif; */
+  font-size: 1.6cm;
+  /* color: rgb(196, 196, 196); */
+  color: white;
+  margin-bottom: 0.5cm;
+}
+#self .myself a {
+  background-color: rgb(255, 193, 164);
+  font-size: 0.8cm;
+  font-weight: bold;
+  color: rgb(37, 37, 37);
+  text-decoration: none;
+  border-radius: 30px 30px 30px 30px;
+  padding: 8px;
+}
+#about {
+  /* margin-left: 1cm; */
+  /* margin-right: 1cm; */
+  padding: 1cm 1cm 1cm 1cm;
+  font-size: 2rem;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(8px);
+}
+#about .aboutme {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 5cm;
+}
+#about h1 {
+  /* margin-left: -1cm; */
+  /* margin-bottom: .5cm; */
+  margin-top: 4cm;
+  font-size: 2.2cm;
+  padding: 5px;
+  color: rgb(255, 166, 0);
+}
+#skill {
+  display: grid;
+  grid-template-columns: auto;
+  color: white;
+  margin-top: 2cm;
+}
+#skill .skills {
+  padding: 1cm;
+}
+#skill .skills h1 {
+  font-size: 1.5cm;
+  color: orange;
+}
+#skill .skills table {
+  font-size: 0.9cm;
+  padding: 0cm 1cm;
+}
+#skill .education {
+  padding: 1cm;
+  background-color: rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(8px);
+}
+#skill .education h1 {
+  font-size: 1.5cm;
+  color: orange;
+}
+#skill .education ul {
+  margin-left: 1cm;
+  font-size: 0.8cm;
+}
+#skill .experience {
+  padding: 1cm;
+  /* background-color: rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(5px); */
+}
+#skill .experience h1 {
+  font-size: 1.5cm;
+  color: orange;
+}
+#skill .experience ul {
+  margin-left: 1cm;
+  font-size: 0.8cm;
+}
+#project .projects {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  align-items: center;
+  justify-content: center;
+  gap: 5cm;
+  margin-left: 2cm;
+}
+#project h1 {
+  font-size: 1.5cm;
+  color: orange;
+  margin-left: 1cm;
+  margin-top: 2cm;
+}
+.projects .card {
+  width: 20rem;
+  height: 25rem;
+  border: 1px rgb(63, 63, 63);
+  border-radius: 5px;
+  border-style: solid;
+  margin-left: 3cm;
+  margin-top: 1cm;
+  background-color: transparent;
+  backdrop-filter: blur(20px);
+  transition: 0.2s ease;
+}
+.projects .card:hover {
+  box-shadow: 0px 0px 15px 1px rgba(255, 255, 255, 0.192);
+  transform: scale(1.03);
+}
+.projects .card img {
+  margin-left: 0.3cm;
+  margin-top: 0.1cm;
+  justify-content: center;
+  width: 90%;
+  height: 200px;
+  padding: 5px;
+}
+.projects .card a {
+  text-decoration: none;
+}
+.projects .card h5 {
+  font-size: 0.8cm;
+  color: white;
+  text-align: center;
+  padding: 0.5rem;
+}
+.projects .card p {
+  padding: 0rem 1rem;
+  font-size: 1.3rem;
+  text-align: center;
+  color: white;
+}
+footer {
+  background-color: transparent;
+  backdrop-filter: blur(50px);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: white;
+  margin-top: 2cm;
+}
+footer .shop h2 {
+  font-size: 1.5cm;
+  margin: 20px 0;
+  margin-left: -1cm;
+}
+footer .shop h1 {
+  font-size: 1.2cm;
+  margin: 20px 0;
+  color: orange;
+}
+footer .shop ul {
+  display: flex;
+  align-items: center;
+  margin-left: -1cm;
+  margin-bottom: 1cm;
+}
+footer .shop ul li {
+  list-style: none;
+  padding: 10px 10px;
+}
+footer .shop ul li a i {
+  font-size: 0.8cm;
+  color: white;
+  width: 35px;
+  height: 35px;
+  transition: 0.1s ease;
+}
+footer .shop ul li a i:hover {
+  color: blue;
+}
+
+@media only screen and (max-width: 700px) {
+  body {
+    width: 100%;
+    background-image: url(img/folio.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  header {
+    width: 95%;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+  }
+  header nav .logo {
+    margin-top: 1.5cm;
+    /* margin-left: -6cm; */
+    display: block;
+  }
+  header nav .menu {
+    font-size: 1cm;
+    /* margin-left: 15cm; */
+    margin-top: 1cm;
+    margin-bottom: 1cm;
+    display: block;
+    color: white;
+    margin-right: 2cm;
+  }
+  header nav .menu a i {
+    color: white;
+  }
+  header nav .half {
+    display: none;
+  }
+  header nav .full ul {
+    display: none;
+  }
+  header nav .logo h1 {
+    text-align: center;
+    font-size: 1cm;
+    margin-left: -0.5cm;
+    margin-top: -0.5cm;
+    background: -webkit-linear-gradient(
+      rgb(255, 255, 255),
+      rgb(187, 180, 180),
+      rgb(255, 255, 255)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  header nav .half ul {
+    display: block;
+    justify-content: space-evenly;
+  }
+  header nav .half ul li {
+    list-style: none;
+    text-align: center;
+    margin: 20px 0px;
+  }
+  header nav .half ul li a {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    font-size: 1.5cm;
+    align-items: center;
+    transition: 1s ease;
+  }
+  #self .myself {
+    width: 180%;
+    margin: 8cm -.5cm;
+  }
+  #self .myself h2 {
+    font-size: 1.3cm;
+    background: -webkit-linear-gradient(rgb(255, 201, 201), rgb(255, 251, 194));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  #self .myself h1 {
+    font-size: 1.7cm;
+    color: white;
+  }
+  #self .myself h1 span {
+    font-size: 2cm;
+    color: rgb(255, 166, 0);
+  }
+  #self .myself h3 {
+    font-size: 1.4cm;
+    color: rgb(196, 196, 196);
+    margin-bottom: 0.5cm;
+  }
+  #self .myself a {
+    background-color: rgb(255, 193, 164);
+    font-size: 0.8cm;
+    color: rgb(37, 37, 37);
+    text-decoration: none;
+    border-radius: 30px 30px 30px 30px;
+    padding: 10px;
+  }
+  #about {
+    width: 170%;
+    padding: 0;
+    padding-left: 1cm;
+    margin-left: -0.3cm;
+    margin-right: 1cm;
+    font-size: 0.7cm;
+    color: white;
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+  }
+  #about .aboutme {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 1cm;
+  }
+  #about h1 {
+    /* margin-left: -1cm; */
+    /* margin-bottom: .5cm; */
+    margin-top: 2cm;
+    font-size: 2cm;
+    padding: 5px;
+    color: orange;
+  }
+  #about ul li {
+    margin-left: 0.5cm;
+    font-size: 0.9cm;
+  }
+  #skill {
+    display: grid;
+    grid-template-columns: auto;
+    margin-left: 0.5cm;
+    color: white;
+    margin-top: 2cm;
+    width: 180%;
+  }
+  #skill .skills{
+    margin-left: -1cm;
+  }
+  #skill .skills h1 {
+    font-size: 1.3cm;
+    color: orange;
+  }
+  #skill .skills table {
+    font-size: 0.9cm;
+  }
+  #skill .education {
+    width: 90%;
+    margin-left: -1cm;
+    margin-top: 2cm;
+  }
+  #skill .education h1 {
+    font-size: 1.3cm;
+    color: orange;
+  }
+  #skill .education ul li {
+    font-size: 0.9cm;
+  }
+  #skill .experience {
+    width: 90%;
+    margin-left: -1cm;
+    margin-top: 2cm;
+  }
+  #skill .experience h1 {
+    font-size: 1.3cm;
+    color: orange;
+  }
+  #skill .experience ul li {
+    font-size: 0.9cm;
+  }
+  #project .projects {
+    display: grid;
+    grid-template-columns: auto;
+    align-items: center;
+    justify-content: center;
+    gap: 1cm;
+    margin-left: 0.5cm;
+    width: 180%;
+  }
+  /*  */
+  #project h1 {
+    font-size: 1.3cm;
+    color: orange;
+    margin-left: 0.5cm;
+    margin-top: 2cm;
+  }
+  .projects .card {
+    width: 90%;
+    height: 13cm;
+    border: 2px white;
+    border-radius: 5px;
+    border-style: solid;
+    margin-left: 0cm;
+    margin-top: 1cm;
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+  }
+  .projects .card img {
+    margin-left: 0.3cm;
+    margin-top: 0.1cm;
+    justify-content: center;
+    width: 95%;
+    height: 300px;
+    padding: 5px;
+  }
+  .projects .card a {
+    text-decoration: none;
+  }
+  .projects .card p {
+    font-size: 1cm;
+    color: white;
+    text-align: center;
+    padding: 5px;
+  }
+  footer {
+    background-color: transparent;
+    backdrop-filter: blur(50px);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    margin-top: 2cm;
+    width: 185%;
+  }
+  footer .shop h2 {
+    font-size: 1.7cm;
+    margin: 20px 0;
+    /* margin-left: cm; */
+  }
+  footer .shop h1 {
+    font-size: 1.5cm;
+    margin: 20px 0;
+    color: orange;
+  }
+  footer .shop ul {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1cm;
+    gap: 0.5cm;
+  }
+  footer .shop ul li {
+    list-style: none;
+    padding: 10px 10px;
+  }
+  footer .shop ul li a i {
+    font-size: 1cm;
+    color: white;
+    width: 35px;
+    height: 35px;
+  }
+}
